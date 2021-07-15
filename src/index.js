@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { PrimaryButton, SecondaryButton,TertiaryButton }from './components/buttons';
 
+function App() {
+    return (
+        <div>
+            <PrimaryButton>Hello world</PrimaryButton>
+            <SecondaryButton>Goodbye world</SecondaryButton>
+            <TertiaryButton>Hey world</TertiaryButton>
+        </div>
+    );
+}
+    
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <App />,
+    document.querySelector("#root"));
